@@ -1,0 +1,43 @@
+ .social-icon { width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 6px; }
+  .animate-fadeInUp { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+  .fadeInUp-show { opacity: 1; transform: translateY(0); }
+  .hover-zoom:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.4s ease; }
+  .sticky-header { transition: background-color 0.3s, box-shadow 0.3s; }
+  .back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    background-color: #cdf216;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 50;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  .back-to-top:hover { background-color: #cdf216; }
+
+    /* Stilizacija za Elfsight Google Reviews widget */
+    #recenzije .elfsight-app-ff96c733-6832-427f-b340-cd89cb0dc14b {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+      box-sizing: border-box;
+      border-radius: 2rem;
+      /* zaobljene ivice */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      /* mekani shadow */
+      background-color: #ffffff;
+      /* bela pozadina da se istakne */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    /* Efekat hover */
+    #recenzije .elfsight-app-ff96c733-6832-427f-b340-cd89cb0dc14b:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    }
+  
+
