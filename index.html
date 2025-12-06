@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PureWash - profesionalno dubinsko pranje nameštaja, tepiha i auto enterijera u Vranju i okolini.">
+<meta name="google-site-verification" content="aC380T_QXQs57-Lqvs9NSYDsx9QlRUgxU3In9ecPmik" />
+
+
+<title>ProDubinsko-Vranje</title>
+<!-- Open Graph -->
+<meta property="og:title" content="PureWash - Dubinsko pranje">
+<meta property="og:description" content="Profesionalno dubinsko pranje nameštaja, tepiha i auto enterijera u Vranju.">
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ProDubinsko-pranje Vranje">
+<meta name="twitter:image" content="https://www.purewash-dubinsko-pranje-beograd.rs/Slike/logo.png">
+<link rel="icon" href="./Slike/logo.png" type="image/png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.1/dist/simple-lightbox.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="./CSS/stajl.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<link rel="icon" href="./Slike/logo.png" type="image/png">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Header -->
+<header id="header" class="bg-white shadow-md sticky top-0 z-40 sticky-header">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <img src="./Slike/logo.png" alt=" Logo" class="h-20"> <!-- veći logo -->
+
+    <!-- Hamburger dugme -->
+    <button id="menu-btn" class="md:hidden flex flex-col space-y-1 focus:outline-none">
+      <span class="block w-6 h-0.5 bg-gray-800"></span>
+      <span class="block w-6 h-0.5 bg-gray-800"></span>
+      <span class="block w-6 h-0.5 bg-gray-800"></span>
+    </button>
+
+    <!-- Desktop meni -->
+    <nav class="hidden md:flex space-x-8 font-semibold text-lg"> <!-- veći font -->
+      <a href="#o-meni" class="hover:text-blue-600">O nama</a>
+      <a href="#usluge" class="hover:text-blue-600">Usluge</a>
+      <a href="#galerija" class="hover:text-blue-600">Galerija</a>
+      <a href="#faq" class="hover:text-blue-600">Pitanja</a>
+      <a href="#kontakt" class="hover:text-blue-600">Kontakt</a>
+    </nav>
+  </div>
+  
+
+  <!-- Mobilni meni -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
+    <nav class="flex flex-col space-y-4 p-6 font-semibold">
+      <a href="#o-meni" class="hover:text-blue-600">O nama</a>
+      <a href="#usluge" class="hover:text-blue-600">Usluge</a>
+      <a href="#galerija" class="hover:text-blue-600">Galerija</a>
+  
+      <a href="#faq" class="hover:text-blue-600">Pitanja</a>
+      <a href="#kontakt" class="hover:text-blue-600">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="bg-yellow-400 text-white text-center py-24 relative overflow-hidden">
+  <div class="max-w-3xl mx-auto animate-fadeInUp">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">ProDubinsko</h1>
+    <p class="text-xl mb-8">Profesionalno dubinsko pranje nameštaja,tepiha,automobila</p>
+
+<!-- Dugme za običan poziv -->
+<a href="tel:+381603836788"
+  class="bg-green-500 text-white font-bold py-3 px-6 rounded-full shadow-md hover:bg-green-600 transition inline-flex items-center">
+  <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Telefon" class="w-6 h-6 mr-2">Pozovi sada i zakaži
+</a>
+
+
+    <!-- Dugme za Viber -->
+    <a href="viber://chat?number=%2B381603836788" target="_blank"
+      class="bg-purple-600 text-white font-bold py-3 px-6 rounded-full shadow-md hover:bg-purple-700 transition inline-flex items-center ml-4">
+      <img src="./Slike/Viber_WhatApp_ikone/viberlogo.png" alt="Viber" class="w-6 h-6 mr-2">Zakaži preko Vibera
+    </a>
+  </div>
+</section>
+
+
+<!-- O meni -->
+<section id="o-meni" class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center animate-fadeInUp">
+  <img src="./Slike/moja_slika.jpg" alt="Vlasnik" class="rounded-2xl shadow-lg" height="900px" width="550px">
+  <div>
+    <h2 class="text-3xl font-bold mb-4">O nama</h2>
+    <p class="list-disc list-inside text-lg mb-4">
+    ProDubinsko je profesionalni servis specijalizovan za dubinsko čišćenje nameštaja, dušeka, tepiha, automobila i svih
+    površina koje zahtevaju temeljno i higijenski duboko pranje. Sa sedištem u Vranju i radom na području cele okoline, naš
+    cilj je da vaš dom, kancelariju ili vozilo učinimo potpuno čistim, bez prašine, grinja, fleka i neprijatnih mirisa.
+    
+    Koristimo savremene mašine i proverena ekološka sredstva koja dubinski uklanjaju nečistoće, a pritom su bezbedna za
+    decu, kućne ljubimce i osetljive površine. Naš tim je posvećen, obučen i fokusiran na kvalitet, pa svaki posao radimo do
+    najsitnijeg detalja – kao da je u pitanju naš sopstveni prostor.
+    </p>
+    <ul class="list-disc list-inside text-lg mb-4">
+      <li>Radimo na teritoriji: Vranja, Bujanovaca i Preševa</li>
+      <li>Brzo i efikasno čišćenje</li>
+      <li>Garancija zadovoljstva</li>
+    </ul>
+
+    <!-- Leaflet mapa -->
+    <div id="map" class="mt-6 rounded-2xl overflow-hidden shadow-lg" style="height: 300px;"></div>
+  </div>
+</section>
+
+<section id="usluge" class="py-16 bg-gray-50">
+  <div class="px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Cenovnik usluga</h2>
+
+    <!-- Flex + gap + centriranje -->
+    <div class="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
+
+      <!-- Nameštaj -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition text-center w-80">
+        <img src="https://img.icons8.com/color/96/sofa.png" 
+             alt="Sofa" class="w-16 h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-4 text-blue-600">Dubinsko pranje nameštaja</h3>
+        <ul class="space-y-3 text-gray-700 text-left">
+          <li class="flex justify-between"><span>Dvosed</span> <b>1200 RSD</b></li>
+          <li class="flex justify-between"><span>Trosed</span> <b>1600 RSD</b></li>
+          <li class="flex justify-between"><span>Četvorosed</span> <b>2200 RSD</b></li>
+          <li class="flex justify-between"><span>Francuski ležaj</span> <b>2200 RSD</b></li>
+          <li class="flex justify-between"><span>Ugaona garnitura</span> <b>2500RSD</b></li>
+          <li class="flex justify-between"><span>Fotelja</span> <b>800 RSD</b></li>
+          <li class="flex justify-between"><span>Dušek jednostrano</span> <b>1200 RSD</b></li>
+          <li class="flex justify-between"><span>Dušek dvostrano</span> <b>1600 RSD</b></li>
+          <li class="flex justify-between"><span>Bračni dušek jednostrano</span> <b>1500 RSD</b></li>
+          <li class="flex justify-between"><span>Bračni dušek dvostrano</span> <b>2500RSD</b></li>
+          <li class="flex justify-between">Tepih (po m²)<b>220 RSD</b></li>
+          <li class="flex justify-between">Etison (po m²)<b>220 RSD</b></li>
+          <li class="flex justify-between">Otirač<b>500 RSD</b></li>
+          <li class="flex justify-between">Tabure<b>400RSD</b></li>
+        </ul>
+      </div>
+
+      <!-- Dečija oprema -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition text-center w-80">
+        <img src="https://img.icons8.com/color/96/baby-bottle.png" 
+             alt="Bebi oprema" class="w-16 h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-4 text-blue-600">Dečija oprema</h3>
+        <ul class="space-y-3 text-gray-700 text-left">
+          <li class="flex justify-between"><span>Kolica za bebe</span> <b>1000 RSD</b></li>
+          <li class="flex justify-between"><span>Auto sedište</span> <b>700 RSD</b></li>
+          <li class="flex justify-between"><span>Bebi dušek</span> <b>800 RSD</b></li>
+        </ul>
+      </div>
+      <!-- Automobili -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition text-center w-80">
+        <img src="https://img.icons8.com/color/96/car--v1.png" alt="Auto" class="w-16 h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-4 text-blue-600">Dubinsko pranje Automobila</h3>
+        <ul class="space-y-3 text-gray-700 text-left">
+          <li class="flex justify-between"><span>Samo sedišta</span> <b>3000 RSD</b></li>
+          <li class="flex justify-between"><span>Patos, sedišta, gepek + plastika</span> <b>5500 RSD</b></li>
+          <li class="flex justify-between"><span>Karavan</span> <b>6000 RSD</b></li>
+          <li class="flex justify-between"><span>Džip</span> <b>6500 RSD</b></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Galerija -->
+
+<!-- Ako već koristiš Tailwind, ovaj link preskoči -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Fancybox za lightbox (uvećanje slike) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+<section id="galerija" class="bg-gray-100 py-12">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Galerija – Pre i Posle</h2>
+
+    <!-- Galerija -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <a data-fancybox="gallery" href="./Slike/Pranje_Pre_Posle/slika1.png" class="block rounded-xl overflow-hidden">
+        <img src="./Slike/Pranje_Pre_Posle/slika1.png" alt="Sofa" loading="lazy"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      </a>
+
+      <a data-fancybox="gallery" href="./Slike/Pranje_Pre_Posle/slika2.png" class="block rounded-xl overflow-hidden">
+        <img src="./Slike/Pranje_Pre_Posle/slika2.png" alt="Auto" loading="lazy"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      </a>
+
+      <a data-fancybox="gallery" href="./Slike/Pranje_Pre_Posle/slika3.png" class="block rounded-xl overflow-hidden">
+        <img src="./Slike/Pranje_Pre_Posle/slika3.png" alt="Tepih" loading="lazy"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      </a>
+
+      <a data-fancybox="gallery" href="./Slike/Pranje_Pre_Posle/slika4.png" class="block rounded-xl overflow-hidden">
+        <img src="./Slike/Pranje_Pre_Posle/slika4.png" alt="Stolica" loading="lazy"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      </a>
+
+      <a data-fancybox="gallery" href="./Slike/Pranje_Pre_Posle/slika5.png" class="block rounded-xl overflow-hidden">
+        <img src="./Slike/Pranje_Pre_Posle/slika5.png" alt="Dušek" loading="lazy"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      </a>
+
+      <a data-fancybox="gallery" href="./Slike/Pranje_Pre_Posle/slika6.png" class="block rounded-xl overflow-hidden">
+        <img src="./Slike/Pranje_Pre_Posle/slika6.png" alt="Nameštaj" loading="lazy"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      </a>
+      <a data-fancybox="gallery" href="./Slike/Pranje_Pre_Posle/slika7.png" class="block rounded-xl overflow-hidden">
+        <img src="./Slike/Pranje_Pre_Posle/slika7.png" alt="Nameštaj" loading="lazy"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      </a>
+      <a data-fancybox="gallery" href="./Slike/Pranje_Pre_Posle/slika8.png" class="block rounded-xl overflow-hidden">
+        <img src="./Slike/Pranje_Pre_Posle/slika8.png" alt="Nameštaj" loading="lazy"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      </a>
+      <a data-fancybox="gallery" href="./Slike/Pranje_Pre_Posle/slika9.png" class="block rounded-xl overflow-hidden">
+        <img src="./Slike/Pranje_Pre_Posle/slika9.png" alt="Nameštaj" loading="lazy"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      </a>
+    </div>
+  </div>
+</section>
+
+</div>
+</section>
+<!-- FAQ -->
+<section id="faq" class="py-20 max-w-6xl mx-auto px-6 animate-fadeInUp">
+  <h2 class="text-3xl font-bold text-center mb-12">❓ Česta pitanja ❓</h2>
+  <div class="space-y-6">
+    <div>
+      <h3 class="font-semibold text-xl mb-2">Koliko traje dubinsko pranje nameštaja?</h3>
+      <p>U proseku 1-2 sata, zavisno od veličine i tipa nameštaja.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-xl mb-2">Da li koristite hemikalije?</h3>
+      <p>Sve hemikalije su bezbedne za decu i kućne ljubimce, ekološki prihvatljive.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-xl mb-2">Koliko unapred treba zakazati?</h3>
+      <p>Preporučujemo da zakazujete 1-3 dana unapred, zavisno od termina.</p>
+    </div>
+    
+    <div>
+      <h3 class="font-semibold text-xl mb-2">Da li dolazite na adresu?</h3>
+      <p>Da, dolazimo direktno na vašu adresu. Naplata dolaska zavisi od lokacije:</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Vranje: Besplatno</li>
+        <li>Bujanovac: 500 RSD</li>
+        <li>Preševo: 1000 RSD</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-xl mb-2">Da li se dubinsko pranje može raditi zimi?</h3>
+      <p>Da, dubinsko pranje se može obaviti i zimi. Koristimo opremu i sredstva koja omogućavaju bezbedno i efikasno
+        čišćenje i pri nižim temperaturama.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-xl mb-2">Koliko brzo se nameštaj suši nakon pranja?</h3>
+      <p>U zavisnosti od materijala, nameštaj obično bude suv za 2-6 sati. Koristimo metode koje ubrzavaju sušenje.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-xl mb-2">Da li mogu zakazati pranje samo jednog dela nameštaja?</h3>
+      <p>Da, možete zakazati pranje pojedinačnih delova kao što su fotelje, trosedi ili dušeci, po cenovniku koji važi
+        za te stavke.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Kontakt -->
+<section id="kontakt" class="py-20 max-w-6xl mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-12">Kontakt</h2>
+  <div class="text-center space-y-4 text-lg">
+
+    <!-- Telefon -->
+    <p>
+      <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Telefon"
+        class="inline w-6 h-6 mr-2 align-middle">
+      <a href="tel:+381603836788" class="hover:underline">063/383-6788</a>
+    </p>
+
+    <!-- Viber -->
+    <p>
+      <img src="./Slike/Viber_WhatApp_ikone/viberlogo.png" alt="Viber"
+        class="social-icon inline w-6 h-6 mr-2 align-middle">
+      Dostupan sam i na Viberu
+    </p>
+
+    <!-- Gmail -->
+    <p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail"
+        class="inline w-6 h-6 mr-2 align-middle">
+      <a href="mailto:jankovicdragan999@gmail.com" class="hover:underline">jankovicdragan999@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+<!-- Instagram sekcija -->
+<section id="instagram" class="py-16 text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white">
+  <h2 class="text-4xl font-bold mb-4 drop-shadow-lg">📸 Zapratite nas na Instagramu</h2>
+  <p class="text-lg mb-8 font-medium drop-shadow-md">
+    Pratite naše najnovije radove i akcije — čist dom, čist život!
+  </p>
+
+  <a href="https://www.instagram.com/dubinsko_pranjevranje/" target="_blank"
+    class="inline-flex items-center bg-white text-pink-600 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-pink-100 transition transform hover:scale-105">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" class="w-6 h-6 mr-2">
+    Posetite naš Instagram profil
+  </a>
+</section>
+
+
+
+<footer class="bg-yellow-400 text-white text-center py-6 mt-12">
+  &copy; <span id="pw-year"></span> ProDubunsko. Sva prava zadržana.
+</footer>
+<!-- Floating buttons: Call + Back to Top -->
+<div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+
+  <!-- Dugme za poziv -->
+  <a href="tel:+381603836788"
+    class="group bg-green-500 text-white rounded-full shadow-lg p-4 hover:bg-green-600 transition flex items-center justify-center">
+    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Pozovi sada" class="w-6 h-6">
+
+    <!-- Tooltip iznad dugmeta -->
+    <span
+      class="absolute bottom-14 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition">
+      Pozovi sada 📞
+    </span>
+  </a>
+
+  <!-- Back to Top dugme svetlo sivo sa većom ikonicom -->
+  <div id="back-to-top"
+    class="cursor-pointer bg-gray-100 text-gray-800 rounded-full p-4 shadow-lg flex items-center justify-center hover:bg-gray-200 transition text-2xl">
+    ⬆️
+  </div>
+
+</div>
+
+
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="./JS/js_kod.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script>
+
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
